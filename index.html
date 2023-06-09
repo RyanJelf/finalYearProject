@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>- Ryan Jelf FYP</title>
+  <script type="module" src="main.js" defer></script>
+</head>
+
+<body class="text-2xl">
+  <h1 class="ml-5 ">Recipe Search Using Trained Classification Model</h1>
+  <div class="">
+    <div class="grid grid-cols-2 p-5">
+      <canvas id="canvas"></canvas>
+      <p class="mx-auto"> Live Feed: <video id="video" class="rounded-lg"></video>
+      </p>
+      <p class="ml-1 mx-auto"> Uploaded Image: <img id="frame-preview" src="" alt="" class="rounded-lg" />
+      </p>
+    </div>
+    <div class="pt-10">
+      <form class="flex items-center justify-center bg-grey-lighter ">
+        <button id="videoImageBtn"
+          class="px-1 py-2 bg-white text-blue rounded-lg shadow-lg tracking-wide  border border-blue cursor-pointer hover:bg-blue hover:text-blue-500">Take
+          photo</button>
+        <label
+          class="ml-5 px-1 py-2 bg-white text-blue rounded-lg shadow-lg tracking-wide  border border-blue cursor-pointer hover:bg-blue hover:text-blue-500">
+          <span>Upload File</span>
+          <input type='file' class="hidden" id="frame" />
+        </label>
+        <button type="submit"
+          class="ml-5 items-center px-1 py-2 bg-white text-blue rounded-lg shadow-lg tracking-wide border border-blue cursor-pointer hover:bg-blue hover:text-blue-500">Classify
+          Image</button>
+      </form>
+    </div>
+    <div>
+      <p id="resultList" class="mt-10 text-center font-bold text-3xl"></p>
+      <p id="cMessage" class="mt-10 text-center font-bold text-3xl"></p>
+    </div>
+    <br>
+    <br>
+    <section class="w-fit mx-auto ">
+      <label for="search-diet" class="font-bold ">Diet:</label>
+      <select id="search-diet" name="search-diet" class="shadow-md text-center rounded-lg ml-2">
+        <option value="">Any</option>
+        <option value="balanced">Balanced</option>
+        <option value="high-protein">High-Protein</option>
+        <option value="high-fiber">High-Fibre</option>
+        <option value="low-fat">Low-Fat</option>
+        <option value="low-carb">Low-Carb</option>
+      </select>
+      <label for="search-meal-type" class="ml-10 font-bold">Meal Type:</label>
+      <select id="search-meal-type" name="search-meal-type" class="shadow-md text-center rounded-lg ml-2">
+        <option value="">Any</option>
+        <option value="Breakfast">Breakfast</option>
+        <option value="Lunch">Lunch</option>
+        <option value="Dinner">Dinner</option>
+      </select>
+      <label for="search-cuisine-type" class="ml-10 font-bold">Cuisine Type:</label>
+      <select id="search-cuisine-type" name="search-cuisine-type" class="shadow-md text-center rounded-lg ml-2">
+        <option value="">Any</option>
+        <option value="italian">Italian</option>
+        <option value="indian">Indian</option>
+        <option value="mexican">Mexican</option>
+        <option value="chinese">Chinese</option>
+      </select>
+      <br>
+      <p class="text-center w-fit mx-auto pt-12">
+        <button id="search-recipe-btn"
+          class=" mb-5 items-center px-1 py-2 bg-white text-blue rounded-lg shadow-lg tracking-wide  border border-blue cursor-pointer hover:bg-blue hover:text-blue-500">Search
+          Recipe</button>
+      </p>
+    </section>
+  </div>
+  <div id="recipeList" class="grid gap-4 gap-y-8 md:grid-cols-2 lg:grid-cols-3 mb-16 mt-10 pb-10"></div>
+
+
+  <footer class="flex items-center justify-center py-4">
+    <p class="text-sm text-gray-600">Ryan Jelf 2023</p>
+  </footer>
+</body>
+
+</html>

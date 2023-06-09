@@ -1,0 +1,7 @@
+apple
+banana
+carrot
+onion
+orange
+potato
+watermelon
